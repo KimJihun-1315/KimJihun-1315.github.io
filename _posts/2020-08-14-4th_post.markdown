@@ -99,7 +99,7 @@ namespace Clock
 
 
 
-![img](assets\img\posting\2020-09-21-4th_post_img02.png)
+![img](https://KimJihun-1315.github.io/assets/img/posting/2020-09-21-4th_post_img02.png)
 
 
 
