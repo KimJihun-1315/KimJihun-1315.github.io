@@ -82,7 +82,7 @@ namespace learnToNotification
 
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/>
 
 ### **코드 상세설명**
 
