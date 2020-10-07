@@ -2,30 +2,18 @@
 layout: post
 title:  "[C#][Winform] 시스템 시간 사용하기"
 date:   2020-08-14 20:00:00 +0900
-categories: 
-tags: 
+categories: sw
+tags: win_app
 ---
 먼저 Form.cs[Design]에서 Label을 2개 만들어준다
-
- 
-
 Label의 이름을 dayLabel과 timeLabel로 바꾸어준다.
-
- 
-
 아래의 그림처럼 디자인해 준다.
-
-
-
 ![img](https://KimJihun-1315.github.io/assets/img/posting/20200814_4th/img01.png)
-
-
-
- 
-
+<br/>
+<br/>
+<br/>
 다시 Form.cs로 돌아와 아래의 코드를 작성한다.
-
-```
+```c#
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -94,23 +82,26 @@ namespace Clock
     }
 }
 ```
+<br/>
+<br/>
+<br/>
+<br/>
 
 위의 코드를 입력하고 실행을 하면 
 
-
-
 ![img](https://KimJihun-1315.github.io/assets/img/posting/20200814_4th/img02.png)
 
-
-
+<br/>
 
 프로그램이 잘 실행이 된다
 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
  
 
  
+****코드 설명****
 
-------
+---
 
 코드를 세분화 하여 설명하면 
 
@@ -120,7 +111,8 @@ Timer timer = new Timer();
 
 timer라는 이름을 가진 Timer를 만든다
 
- 
+ <br/>
+ <br/>
 
 ```
 private void Form1_Load(object sender, EventArgs e)
@@ -130,14 +122,14 @@ private void Form1_Load(object sender, EventArgs e)
 	timer.Start();
 }
 ```
-
 timer의 간격을 1000ms로 정한다.
 
 tickCon함수를 실행시켜준다.
 
 timer 시작!!
 
- 
+ <br/>
+ <br/>
 
 ```
 private void tickCon(object sender,EventArgs e)
@@ -154,7 +146,8 @@ private void tickCon(object sender,EventArgs e)
 
 틱마다 값을 바꿔주고 라벨의 값을 갱신시켜 주는 함수
 
- 
+ <br/>
+ <br/>
 
 ```
 int yyyy = System.DateTime.Now.Year;
@@ -169,7 +162,9 @@ yyyy, MM, dd, hh, mm, ss는 각각 년, 월, 일, 시, 분, 초를 의미한다.
 
 각각의 변수 값에 System.DateTime.Now.~~을 이용하여 현재시간을 시스템에서 받아온다.
 
- 
+ <br/>
+ <br/>
+ <br/>
 
 ```
 string day = "";
@@ -195,7 +190,9 @@ else{time += ss;}
 
 day에는 년,월,일을 time에는 시,분,초를 저장한다.
 
- 
+ <br/>
+ <br/>
+ <br/>
 
 ```
 dayLabel.Text = day;
@@ -205,7 +202,7 @@ timeLabel.Text = time;
 dayLabel의 Text를 day(변수)의 값으로 바꾼다. 
 timeLabel의 Text를 time(변수)의 값으로 바꾼다.
 
-
+<br/><br/><br/>
 
 ---
 
