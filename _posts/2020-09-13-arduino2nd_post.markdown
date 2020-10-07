@@ -2,8 +2,8 @@
 layout: post
 title:  "[Arduino] 수동부저와 능동부저"
 date:   2020-09-13 20:00:00 +0900
-categories: 
-tags: 
+categories: hw
+tags: arduino
 ---
 먼저 차이를 알기전에 
 

@@ -2,8 +2,8 @@
 layout: post
 title:  "[Arduino] LCD_I2C에 대해서"
 date:   2020-09-20 20:00:00 +0900
-categories: 
-tags: 
+categories: hw
+tags: arduino
 ---
 
 먼저 LCD에 대해 알아보면 Liquid Crystal Display의 줄임말로 우리가 흔히 말하는 액정이다.
