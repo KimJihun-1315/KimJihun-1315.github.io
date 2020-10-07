@@ -1,7 +1,0 @@
----
-layout: post
-title:  "[C#][Winform] 알림창 띄우기"
-date:   2020-08-22 20:00:00 +0900
-categories: 
-tags: 
----
