@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "[C#][Winform] .txt 파일 저장하고 불러오기"
+date:   2020-08-30 20:00:00 +0900
+categories: 
+tags: 
+---

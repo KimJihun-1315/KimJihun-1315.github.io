@@ -1,0 +1,211 @@
+---
+layout: post
+title:  "[C#][Winform] 시스템 시간 사용하기"
+date:   2020-08-14 20:00:00 +0900
+categories: 
+tags: 
+---
+먼저 Form.cs[Design]에서 Label을 2개 만들어준다
+
+ 
+
+Label의 이름을 dayLabel과 timeLabel로 바꾸어준다.
+
+ 
+
+아래의 그림처럼 디자인해 준다.
+
+
+
+![img](assets\img\posting\2020-09-21-4th_post_img01.png)
+
+
+
+ 
+
+다시 Form.cs로 돌아와 아래의 코드를 작성한다.
+
+```
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Clock
+{
+    public partial class Form1 : Form
+    {
+        Timer timer = new Timer();
+        
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer.Interval = 1000;
+            timer.Tick += new EventHandler(this.tickCon);
+            timer.Start();
+        }
+
+        //timer eventhandler
+        private void tickCon(object sender,EventArgs e)
+        {
+            //get current time
+            int yyyy = System.DateTime.Now.Year;
+            int MM = System.DateTime.Now.Month;
+            int dd = System.DateTime.Now.Day;
+            int hh = System.DateTime.Now.Hour;
+            int mm = System.DateTime.Now.Minute;
+            int ss = System.DateTime.Now.Second;
+
+
+            //time
+            string day = "";
+            string time = "";
+
+            //padding leading zero
+            day += yyyy;
+            day += "-";
+            day += MM;
+            day += "-";
+            day += dd;
+            
+            if (hh < 10){time += "0" + hh;}
+            else{time += hh;}
+            time += ":";
+            if (mm < 10){time += "0" + mm;}
+            else{time += mm;}
+            time += ":";
+            if (ss < 10){time += "0" + ss;}
+            else{time += ss;}
+
+            //update label
+            dayLabel.Text = day;
+            timeLabel.Text = time;
+        }
+    }
+}
+```
+
+위의 코드를 입력하고 실행을 하면 
+
+
+
+![img](assets\img\posting\2020-09-21-4th_post_img02.png)
+
+
+
+프로그램이 잘 실행이 된다
+
+ 
+
+ 
+
+------
+
+코드를 세분화 하여 설명하면 
+
+```
+Timer timer = new Timer();
+```
+
+timer라는 이름을 가진 Timer를 만든다
+
+ 
+
+```
+private void Form1_Load(object sender, EventArgs e)
+{
+	timer.Interval = 1000;
+	timer.Tick += new EventHandler(this.tickCon);
+	timer.Start();
+}
+```
+
+timer의 간격을 1000ms로 정한다.
+
+tickCon함수를 실행시켜준다.
+
+timer 시작!!
+
+ 
+
+```
+private void tickCon(object sender,EventArgs e)
+{
+	int yyyy = System.DateTime.Now.Year;
+	int MM = System.DateTime.Now.Month;
+	
+    	- - -
+    
+	dayLabel.Text = day;
+	timeLabel.Text = time;
+}
+```
+
+틱마다 값을 바꿔주고 라벨의 값을 갱신시켜 주는 함수
+
+ 
+
+```
+int yyyy = System.DateTime.Now.Year;
+int MM = System.DateTime.Now.Month;
+int dd = System.DateTime.Now.Day;
+int hh = System.DateTime.Now.Hour;
+int mm = System.DateTime.Now.Minute;
+int ss = System.DateTime.Now.Second;
+```
+
+yyyy, MM, dd, hh, mm, ss는 각각 년, 월, 일, 시, 분, 초를 의미한다.
+
+각각의 변수 값에 System.DateTime.Now.~~을 이용하여 현재시간을 시스템에서 받아온다.
+
+ 
+
+```
+string day = "";
+string time = "";
+
+day += yyyy;
+day += "-";
+day += MM;
+day += "-";
+day += dd;
+            
+if (hh < 10){time += "0" + hh;}
+else{time += hh;}
+time += ":";
+if (mm < 10){time += "0" + mm;}
+else{time += mm;}
+time += ":";
+if (ss < 10){time += "0" + ss;}
+else{time += ss;}
+```
+
+변수 day와 time를 선언하고 
+
+day에는 년,월,일을 time에는 시,분,초를 저장한다.
+
+ 
+
+```
+dayLabel.Text = day;
+timeLabel.Text = time;
+```
+
+dayLabel의 Text를 day(변수)의 값으로 바꾼다. 
+timeLabel의 Text를 time(변수)의 값으로 바꾼다.
+
+
+
+---
+
+**이상으로 포스팅을 마치겠습니다.**
