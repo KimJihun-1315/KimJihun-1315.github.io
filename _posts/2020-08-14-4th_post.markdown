@@ -17,7 +17,7 @@ Label의 이름을 dayLabel과 timeLabel로 바꾸어준다.
 
 
 
-![img](assets\img\posting\2020-09-21-4th_post_img01.png)
+![img](https://KimJihun-1315.github.io/assets/img/posting/2020-09-21-4th_post_img01.png)
 
 
 
