@@ -77,7 +77,7 @@ namespace Clock
 
             //update label
             dayLabel.Text = day;
-            timeLabel.Text = time;
+            timeLabel.Text = time; 
         }
     }
 }
