@@ -8,7 +8,7 @@ tags: win_app
 먼저 Form.cs[Design]에서 Label을 2개 만들어준다
 Label의 이름을 dayLabel과 timeLabel로 바꾸어준다.
 아래의 그림처럼 디자인해 준다.
-![img](https://KimJihun-1315.github.io/assets/img/posting/20200814_4th/img01.png)
+![img](https://KimJihun-1315.github.io/assets/img/posting/20200814/img01.png)
 <br/>
 <br/>
 <br/>
@@ -89,7 +89,7 @@ namespace Clock
 
 위의 코드를 입력하고 실행을 하면 
 
-![img](https://KimJihun-1315.github.io/assets/img/posting/20200814_4th/img02.png)
+![img](https://KimJihun-1315.github.io/assets/img/posting/20200814/img02.png)
 
 <br/>
 
