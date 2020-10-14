@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Raspberry Pi
-slug: raspberry_pi
+title: Embedded
+slug: embedded
 category: hw
 menu: false
-order: 3
+order: 1
 ---
