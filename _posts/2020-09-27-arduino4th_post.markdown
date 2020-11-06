@@ -2,8 +2,8 @@
 layout: post
 title:  "[Arduino] 가스센서 다루기(MQ시리즈)"
 date:   2020-09-27 20:00:00 +0900
-categories: 
-tags: 
+categories: hw
+tags: arduino
 ---
 오늘 설명할 센서는 제목에서 보이는거 처럼 가스센서를 다룰것이다. 
 
